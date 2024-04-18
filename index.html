@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js Timer</title>
-    <!-- <link rel="stylesheet" href="./styles.css"> -->
     <style>
 body {
     margin: 0;
@@ -65,13 +64,16 @@ button:hover {
     <button onclick="startTimer()">Start</button>
     <button onclick="pauseTimer()">Pause</button>
     <button onclick="resetTimer()">Reset</button>
+    
     <div id="timerDisplay"></div>
+
     <script>
         let timerInterval;
         let hoursInput = document.getElementById('hours');
         let minutesInput = document.getElementById('minutes');
         let secondsInput = document.getElementById('seconds');
         let timerDisplay = document.getElementById('timerDisplay');
+
         function startTimer() {
             let totalSeconds = parseInt(hoursInput.value) * 3600 + parseInt(minutesInput.value) * 60 + parseInt(secondsInput.value);
             timerInterval = setInterval(() => {
