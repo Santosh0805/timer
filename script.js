@@ -1,18 +1,22 @@
-let timerInterval;
-let hoursInput = document.getElementById('hours');
-let minutesInput = document.getElementById('minutes');
-let secondsInput = document.getElementById('seconds');
-let timerDisplay = document.getElementById('timerDisplay');
+var timerInterval;
+var hoursInput = document.getElementById('hours');
+var minutesInput = document.getElementById('minutes');
+var secondsInput = document.getElementById('seconds');
+var timerDisplay = document.getElementById('timerDisplay');
 
 function startTimer() {
-    let totalSeconds = parseInt(hoursInput.value) * 3600 + parseInt(minutesInput.value) * 60 + parseInt(secondsInput.value);
+    var totalSeconds = 
+    parseInt(hoursInput.value) * 3600 + 
+    parseInt(minutesInput.value) * 60 + 
+    parseInt(secondsInput.value);
+
     timerInterval = setInterval(() => {
         if (totalSeconds <= 0) {
             clearInterval(timerInterval);
         } else {
-            let hours = Math.floor(totalSeconds / 3600);
-            let minutes = Math.floor((totalSeconds % 3600) / 60);
-            let seconds = totalSeconds % 60;
+            var hours = Math.floor(totalSeconds / 3600);
+            var minutes = Math.floor((totalSeconds % 3600) / 60);
+            var seconds = totalSeconds % 60;
             timerDisplay.innerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             totalSeconds--;
         }
