@@ -18,7 +18,7 @@ function startTimer() {
             var minutes = Math.floor((totalSeconds % 3600) / 60);
             var seconds = totalSeconds % 60;
             timerDisplay.innerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            totalSeconds--;
+            totalSeconds-- ;
         }
     }, 1000);
 }
