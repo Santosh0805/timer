@@ -1,4 +1,3 @@
-<script>
 let timerInterval;
 let hoursInput = document.getElementById('hours');
 let minutesInput = document.getElementById('minutes');
@@ -29,4 +28,3 @@ function resetTimer() {
     secondsInput.value = '';
     timerDisplay.innerText = '';
 }
-</script>
