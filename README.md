@@ -1,4 +1,4 @@
-html are the makeing the body structure and buttons.
+html are the makeing the  body ,input  structure and buttons.
 
 css are given to the colour and button shaped .
 
